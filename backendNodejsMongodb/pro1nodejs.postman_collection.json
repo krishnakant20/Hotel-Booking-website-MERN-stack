@@ -1,0 +1,442 @@
+{
+	"info": {
+		"_postman_id": "be06a441-1725-4deb-b164-55b77fc1a502",
+		"name": "pro1nodejs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hotels",
+			"item": [
+				{
+					"name": "postHotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\"name\":\"Happy Mumbai Hotel\",\r\n\"type\":\"hotel\",\r\n\"city\":\"Mumbai\",\r\n\"address\":\"Maharshtra\",\r\n\"distance\":500,\r\n\"title\":\"Best hotel in Mumbai\",\r\n\"desc\":\"IPL cricket teams favourite\",\r\n\"cheapestPrice\":300\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8800/api/hotels/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"hotels",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putHotel",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\"name\":\"orchicd2\",\r\n\"city\":\"mumbai bombay mumba\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8800/api/hotels/63ccf39cd51dab9930dc15e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"hotels",
+								"63ccf39cd51dab9930dc15e1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delHotel",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\"name\":\"orchicd2\",\r\n\"type\":\"hotel\",\r\n\"city\":\"mumbai\",\r\n\"address\":\"maharshtra\",\r\n\"distance\":5002,\r\n\"title\":\"best hotel in city\",\r\n\"desc\":\"best hotel in city\",\r\n\"cheapestPrice\":1002\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8800/api/hotels/63ccf388d51dab9930dc15df",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"hotels",
+								"63ccf388d51dab9930dc15df"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get1Hotel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\"name\":\"orchicd2\",\r\n\"type\":\"hotel\",\r\n\"city\":\"mumbai\",\r\n\"address\":\"maharshtra\",\r\n\"distance\":5002,\r\n\"title\":\"best hotel in city\",\r\n\"desc\":\"best hotel in city\",\r\n\"cheapestPrice\":1002\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8800/api/hotels/find/63d227c27db6756fdce74c4f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"hotels",
+								"find",
+								"63d227c27db6756fdce74c4f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllHotel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\"name\":\"orchicd2\",\r\n\"type\":\"hotel\",\r\n\"city\":\"mumbai\",\r\n\"address\":\"maharshtra\",\r\n\"distance\":5002,\r\n\"title\":\"best hotel in city\",\r\n\"desc\":\"best hotel in city\",\r\n\"cheapestPrice\":1002\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8800/api/hotels/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"hotels",
+								""
+							],
+							"query": [
+								{
+									"key": "featured",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getHotelByCities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8800/api/hotels/countByCity?cities=Chennai,Pune,Mumbai",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"hotels",
+								"countByCity"
+							],
+							"query": [
+								{
+									"key": "cities",
+									"value": "Chennai,Pune,Mumbai"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "countByType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8800/api/hotels/countByType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"hotels",
+								"countByType"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "registerUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"pawarUser\",\r\n    \"email\":\"krishnakant21@gmail.com\",\r\n    \"phone\":\"9876543110\",\r\n    \"city\":\"pune\",\r\n    \"country\":\"india\",\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8800/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"pawarUser\",\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8800/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"pawar12new\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8800/api/users/:userID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"users",
+								":userID"
+							],
+							"variable": [
+								{
+									"key": "userID",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rooms",
+			"item": [
+				{
+					"name": "createRoom",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Premium rooms\",\r\n    \"desc\":\"best quality\",\r\n    \"price\":800,\r\n    \"maxPeople\":2,\r\n    \"roomNumbers\":[{\"number\":201},{\"number\":202},{\"number\":203}]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8800/api/rooms/63df78b03334839dc938608e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"rooms",
+								"63df78b03334839dc938608e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteRoom",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8800/api/rooms/63d21ae1f69bd658d153a739/63cceb621c26dc1a6aa43050",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"rooms",
+								"63d21ae1f69bd658d153a739",
+								"63cceb621c26dc1a6aa43050"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get rooms by hotelID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8800/api/hotels/room/63df78b03334839dc938608e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"hotels",
+								"room",
+								"63df78b03334839dc938608e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unavailable dates",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dates\":[\"2023-02-04T10:49:03.058Z\",\"2023-02-04T10:49:03.058Z\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8800/api/rooms/availability/63de381f83452690508ed082",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8800",
+							"path": [
+								"api",
+								"rooms",
+								"availability",
+								"63de381f83452690508ed082"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
